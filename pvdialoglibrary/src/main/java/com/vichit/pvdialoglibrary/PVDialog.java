@@ -10,7 +10,7 @@ public class PVDialog {
     private OnShowDialog onShowDialog;
     private boolean cancelable;
 
-    PVDialog(Context context, String title, String message) {
+    public PVDialog(Context context, String title, String message) {
         this.context = context;
         if (builder == null) {
             builder = new AlertDialog.Builder(context);
@@ -40,7 +40,7 @@ public class PVDialog {
         alertDialog.show();
     }
 
-    private boolean isCancelable() {
+    public boolean isCancelable() {
         return cancelable;
     }
 
